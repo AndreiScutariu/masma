@@ -1,7 +1,7 @@
 using java.lang;
 using Masma.Agent.Base;
 
-namespace Masma.Agent.Demo
+namespace Masma.Demo
 {
     public class SelfDestructAgent : BaseAgent
     {

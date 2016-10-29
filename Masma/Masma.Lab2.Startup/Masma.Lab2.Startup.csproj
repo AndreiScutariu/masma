@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3BF959D7-99FD-4C0E-AD93-0A538A7C78D7}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{BBCD197D-3F50-4CF1-93C0-21E640FF6EF1}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Masma.Agent.Lab1</RootNamespace>
-    <AssemblyName>Masma.Agent.Lab1</AssemblyName>
+    <RootNamespace>Masma.Lab2.Startup</RootNamespace>
+    <AssemblyName>Masma.Lab2.Startup</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,9 +31,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="JadeLeap">
       <HintPath>..\Lib\JadeLeap.dll</HintPath>
@@ -44,16 +41,8 @@
     <Reference Include="vjslib" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ComputeAverageBehaviour.cs" />
-    <Compile Include="ComputeSumBehaviour.cs" />
-    <Compile Include="CounterBehaviour.cs" />
+    <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Masma.Agent.Base\Masma.Agent.Base.csproj">
-      <Project>{6DF50E8D-F52A-4615-AE6C-312DF86574B1}</Project>
-      <Name>Masma.Agent.Base</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -2,7 +2,7 @@
 using jade.core.behaviours;
 using java.lang;
 
-namespace Masma.Agent.Lab1
+namespace Masma.Lab1.Behaviours
 {
     public class CounterBehaviour : Behaviour
     {

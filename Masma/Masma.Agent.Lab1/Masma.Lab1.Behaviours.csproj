@@ -4,16 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A86D19A8-34A7-49AD-9DDD-432FD9E77026}</ProjectGuid>
+    <ProjectGuid>{3BF959D7-99FD-4C0E-AD93-0A538A7C78D7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Masma.Agent.Demo</RootNamespace>
-    <AssemblyName>Masma.Agent.Demo</AssemblyName>
+    <RootNamespace>Masma.Lab1.Behaviours</RootNamespace>
+    <AssemblyName>Masma.Lab1.Behaviours</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,12 +23,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="JadeLeap">
@@ -40,14 +44,15 @@
     <Reference Include="vjslib" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComputeAverageBehaviour.cs" />
+    <Compile Include="ComputeSumBehaviour.cs" />
+    <Compile Include="CounterBehaviour.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SelfDestructAgent.cs" />
-    <Compile Include="SimpleAgent.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Masma.Agent.Base\Masma.Agent.Base.csproj">
+    <ProjectReference Include="..\Masma.Agent.Base\Masma.Common.csproj">
       <Project>{6DF50E8D-F52A-4615-AE6C-312DF86574B1}</Project>
-      <Name>Masma.Agent.Base</Name>
+      <Name>Masma.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

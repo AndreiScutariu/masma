@@ -1,7 +1,7 @@
 ﻿using System;
 using jade.core.behaviours;
 
-namespace Masma.Agent.Lab1
+namespace Masma.Lab1.Behaviours
 {
     public class ComputeAverageBehaviour : Behaviour
     {

@@ -4,18 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{335AB868-FF22-4480-A34E-43EB52852EEB}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{F0147E9B-58C2-4012-9036-98DAFEB68053}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Masma.Lab1.Startup</RootNamespace>
-    <AssemblyName>Masma.Lab1.Startup</AssemblyName>
+    <RootNamespace>Masma.Builder</RootNamespace>
+    <AssemblyName>Masma.Builder</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -25,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -34,8 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="JadeLeap, Version=3.3.5756.0, Culture=neutral, PublicKeyToken=2240964342a923da, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="JadeLeap">
       <HintPath>..\Lib\JadeLeap.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -44,31 +40,8 @@
     <Reference Include="vjslib" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Startup.cs" />
+    <Compile Include="AgentBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Agent.Factory\Masma.Builder.csproj">
-      <Project>{F0147E9B-58C2-4012-9036-98DAFEB68053}</Project>
-      <Name>Masma.Builder</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Masma.Agent.Base\Masma.Common.csproj">
-      <Project>{6df50e8d-f52a-4615-ae6c-312df86574b1}</Project>
-      <Name>Masma.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Masma.Agent.Demo\Masma.Demo.csproj">
-      <Project>{a86d19a8-34a7-49ad-9ddd-432fd9e77026}</Project>
-      <Name>Masma.Demo</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Masma.Agent.Lab1\Masma.Lab1.Behaviours.csproj">
-      <Project>{3BF959D7-99FD-4C0E-AD93-0A538A7C78D7}</Project>
-      <Name>Masma.Lab1.Behaviours</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -12,13 +12,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{6EC85D79-66A
 		Lib\leap.properties = Lib\leap.properties
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Masma.Factory", "Agent.Factory\Masma.Factory.csproj", "{F0147E9B-58C2-4012-9036-98DAFEB68053}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Masma.Builder", "Agent.Factory\Masma.Builder.csproj", "{F0147E9B-58C2-4012-9036-98DAFEB68053}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Masma.Agent.Demo", "Masma.Agent.Demo\Masma.Agent.Demo.csproj", "{A86D19A8-34A7-49AD-9DDD-432FD9E77026}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Masma.Demo", "Masma.Agent.Demo\Masma.Demo.csproj", "{A86D19A8-34A7-49AD-9DDD-432FD9E77026}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Masma.Agent.Base", "Masma.Agent.Base\Masma.Agent.Base.csproj", "{6DF50E8D-F52A-4615-AE6C-312DF86574B1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Masma.Common", "Masma.Agent.Base\Masma.Common.csproj", "{6DF50E8D-F52A-4615-AE6C-312DF86574B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Masma.Agent.Lab1", "Masma.Agent.Lab1\Masma.Agent.Lab1.csproj", "{3BF959D7-99FD-4C0E-AD93-0A538A7C78D7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Masma.Lab1.Behaviours", "Masma.Agent.Lab1\Masma.Lab1.Behaviours.csproj", "{3BF959D7-99FD-4C0E-AD93-0A538A7C78D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Masma.Lab2.Startup", "Masma.Lab2.Startup\Masma.Lab2.Startup.csproj", "{BBCD197D-3F50-4CF1-93C0-21E640FF6EF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Masma.Messages", "Masma.Messages\Masma.Messages.csproj", "{4DBC9B39-0A27-4B48-8C24-BB01E6EC07C8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{059E740E-7A15-48ED-B2F5-000F8A362BBF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,8 +52,22 @@ Global
 		{3BF959D7-99FD-4C0E-AD93-0A538A7C78D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BF959D7-99FD-4C0E-AD93-0A538A7C78D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BF959D7-99FD-4C0E-AD93-0A538A7C78D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBCD197D-3F50-4CF1-93C0-21E640FF6EF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBCD197D-3F50-4CF1-93C0-21E640FF6EF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBCD197D-3F50-4CF1-93C0-21E640FF6EF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBCD197D-3F50-4CF1-93C0-21E640FF6EF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DBC9B39-0A27-4B48-8C24-BB01E6EC07C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DBC9B39-0A27-4B48-8C24-BB01E6EC07C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DBC9B39-0A27-4B48-8C24-BB01E6EC07C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DBC9B39-0A27-4B48-8C24-BB01E6EC07C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F0147E9B-58C2-4012-9036-98DAFEB68053} = {059E740E-7A15-48ED-B2F5-000F8A362BBF}
+		{A86D19A8-34A7-49AD-9DDD-432FD9E77026} = {059E740E-7A15-48ED-B2F5-000F8A362BBF}
+		{6DF50E8D-F52A-4615-AE6C-312DF86574B1} = {059E740E-7A15-48ED-B2F5-000F8A362BBF}
+		{4DBC9B39-0A27-4B48-8C24-BB01E6EC07C8} = {059E740E-7A15-48ED-B2F5-000F8A362BBF}
 	EndGlobalSection
 EndGlobal

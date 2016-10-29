@@ -5,7 +5,7 @@ using jade.core.behaviours;
 using jade.wrapper;
 using AgentContainer = jade.wrapper.AgentContainer;
 
-namespace Masma.Factory
+namespace Masma.Builder
 {
     public class AgentBuilder
     {

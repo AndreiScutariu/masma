@@ -1,12 +1,12 @@
 ﻿using jade.core;
 using Masma.Agent.Base;
-using Masma.Agent.Lab1;
-using Masma.Factory;
+using Masma.Builder;
+using Masma.Lab1.Behaviours;
 using AgentContainer = jade.wrapper.AgentContainer;
 
 namespace Masma.Lab1.Startup
 {
-    internal static class Program
+    internal static class Startup
     {
         private static void Main()
         {

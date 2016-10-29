@@ -1,8 +1,6 @@
-using System;
-using System.Collections.Generic;
 using Masma.Agent.Base;
 
-namespace Masma.Agent.Demo
+namespace Masma.Demo
 {
     public class SimpleAgent : BaseAgent
     {
