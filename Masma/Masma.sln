@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgentsDemo", "AgentsDemo\AgentsDemo.csproj", "{335AB868-FF22-4480-A34E-43EB52852EEB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Masma.Lab1.Startup", "AgentsDemo\Masma.Lab1.Startup.csproj", "{335AB868-FF22-4480-A34E-43EB52852EEB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{6EC85D79-66A5-42C7-A630-D58BE8FA85A7}"
 	ProjectSection(SolutionItems) = preProject
@@ -11,6 +11,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{6EC85D79-66A
 		Lib\JadeLeap.dll = Lib\JadeLeap.dll
 		Lib\leap.properties = Lib\leap.properties
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Masma.Factory", "Agent.Factory\Masma.Factory.csproj", "{F0147E9B-58C2-4012-9036-98DAFEB68053}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Masma.Agent.Demo", "Masma.Agent.Demo\Masma.Agent.Demo.csproj", "{A86D19A8-34A7-49AD-9DDD-432FD9E77026}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Masma.Agent.Base", "Masma.Agent.Base\Masma.Agent.Base.csproj", "{6DF50E8D-F52A-4615-AE6C-312DF86574B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Masma.Agent.Lab1", "Masma.Agent.Lab1\Masma.Agent.Lab1.csproj", "{3BF959D7-99FD-4C0E-AD93-0A538A7C78D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,6 +30,22 @@ Global
 		{335AB868-FF22-4480-A34E-43EB52852EEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{335AB868-FF22-4480-A34E-43EB52852EEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{335AB868-FF22-4480-A34E-43EB52852EEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0147E9B-58C2-4012-9036-98DAFEB68053}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0147E9B-58C2-4012-9036-98DAFEB68053}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0147E9B-58C2-4012-9036-98DAFEB68053}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0147E9B-58C2-4012-9036-98DAFEB68053}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A86D19A8-34A7-49AD-9DDD-432FD9E77026}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A86D19A8-34A7-49AD-9DDD-432FD9E77026}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A86D19A8-34A7-49AD-9DDD-432FD9E77026}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A86D19A8-34A7-49AD-9DDD-432FD9E77026}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DF50E8D-F52A-4615-AE6C-312DF86574B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DF50E8D-F52A-4615-AE6C-312DF86574B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DF50E8D-F52A-4615-AE6C-312DF86574B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DF50E8D-F52A-4615-AE6C-312DF86574B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BF959D7-99FD-4C0E-AD93-0A538A7C78D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BF959D7-99FD-4C0E-AD93-0A538A7C78D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BF959D7-99FD-4C0E-AD93-0A538A7C78D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BF959D7-99FD-4C0E-AD93-0A538A7C78D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
