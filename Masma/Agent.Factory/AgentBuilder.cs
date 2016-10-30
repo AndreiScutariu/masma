@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using jade.core;
 using jade.core.behaviours;
 using jade.wrapper;
+using Masma.Common.Setup;
 using AgentContainer = jade.wrapper.AgentContainer;
 
 namespace Masma.Builder
@@ -11,9 +12,9 @@ namespace Masma.Builder
     {
         private readonly AgentContainer _agentContainer;
 
-        private readonly IList<Type> _behaviourTypes;
-
         private string _agentName;
+
+        private readonly IList<Type> _behaviourTypes;
 
         private Type _typeOfAgent;
 
@@ -48,6 +49,7 @@ namespace Masma.Builder
 
         public AgentController Build()
         {
+            Agents.Add(_agentName);
             var arguments = new object[_behaviourTypes.Count];
             var idx = 0;
 
@@ -56,6 +58,7 @@ namespace Masma.Builder
                 arguments[idx++] = behaviourType;
             }
 
+            _behaviourTypes.Clear();
             return _agentContainer.createNewAgent(_agentName, _typeOfAgent.FullName, arguments);
         }
     }

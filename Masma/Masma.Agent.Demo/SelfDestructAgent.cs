@@ -1,5 +1,5 @@
 using java.lang;
-using Masma.Agent.Base;
+using Masma.Common.Agent;
 
 namespace Masma.Demo
 {

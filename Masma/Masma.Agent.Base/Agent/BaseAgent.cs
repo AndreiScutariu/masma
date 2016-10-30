@@ -1,7 +1,7 @@
 ﻿using System;
-using jade.core.behaviours;
+using Masma.Common.Interfaces;
 
-namespace Masma.Agent.Base
+namespace Masma.Common.Agent
 {
     public class BaseAgent : jade.core.Agent
     {
@@ -13,7 +13,18 @@ namespace Masma.Agent.Base
 
             foreach (var argument in arguments)
             {
-                var instance = Activator.CreateInstance((Type) argument) as Behaviour;
+                var type = (Type) argument;
+                jade.core.behaviours.Behaviour instance;
+
+                if (typeof(INeedSpecifcAgent).IsAssignableFrom(type))
+                {
+                    instance = Activator.CreateInstance(type, this) as jade.core.behaviours.Behaviour;
+                }
+                else
+                {
+                    instance = Activator.CreateInstance(type) as jade.core.behaviours.Behaviour;
+                }
+
                 addBehaviour(instance);
             }
         }

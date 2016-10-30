@@ -34,6 +34,10 @@
     <Reference Include="JadeLeap">
       <HintPath>..\Lib\JadeLeap.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net20\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -41,9 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReceiveBehaviour.cs" />
     <Compile Include="SelfDestructAgent.cs" />
-    <Compile Include="SimpleAgent.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Masma.Agent.Base\Masma.Common.csproj">
@@ -54,6 +56,9 @@
       <Project>{4dbc9b39-0a27-4b48-8c24-bb01e6ec07c8}</Project>
       <Name>Masma.Messages</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

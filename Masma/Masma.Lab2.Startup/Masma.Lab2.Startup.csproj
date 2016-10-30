@@ -13,7 +13,7 @@
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -35,6 +35,10 @@
     <Reference Include="JadeLeap">
       <HintPath>..\Lib\JadeLeap.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net20\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -43,6 +47,23 @@
   <ItemGroup>
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Agent.Factory\Masma.Builder.csproj">
+      <Project>{F0147E9B-58C2-4012-9036-98DAFEB68053}</Project>
+      <Name>Masma.Builder</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Masma.Agent.Base\Masma.Common.csproj">
+      <Project>{6df50e8d-f52a-4615-ae6c-312df86574b1}</Project>
+      <Name>Masma.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Masma.Messages\Masma.Messages.csproj">
+      <Project>{4dbc9b39-0a27-4b48-8c24-bb01e6ec07c8}</Project>
+      <Name>Masma.Messages</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
