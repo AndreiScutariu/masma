@@ -10,12 +10,12 @@ using Newtonsoft.Json;
 
 namespace Masma.Lab3.Behaviours
 {
-    public class ConsumerSendRequestsBehaviour<T> : OneShotBehaviour, INeedSpecifcAgent
+    public class ConsumerSendSumRequestsBehaviour<T> : OneShotBehaviour, INeedSpecifcAgent
         where T : Agent, IHaveAnWindowsForm
     {
         protected readonly T MyAgent;
 
-        public ConsumerSendRequestsBehaviour(T a) : base(a)
+        public ConsumerSendSumRequestsBehaviour(T a) : base(a)
         {
             MyAgent = a;
         }

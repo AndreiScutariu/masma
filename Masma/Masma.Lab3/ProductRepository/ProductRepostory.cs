@@ -7,7 +7,7 @@ namespace Masma.Lab3.ProductRepository
     {
         public static int RandomProduct()
         {
-            return new Random().Next(1, 4);
+            return new Random().Next(1, 3);
         }
 
         public static List<Product> GetMyProducts(string providerName)
@@ -37,12 +37,6 @@ namespace Masma.Lab3.ProductRepository
                         Name = "PRD_03",
                         Id = 3,
                         Price = 14
-                    },
-                    new Product
-                    {
-                        Name = "PRD_04",
-                        Id = 4,
-                        Price = 17
                     }
                 }
             },

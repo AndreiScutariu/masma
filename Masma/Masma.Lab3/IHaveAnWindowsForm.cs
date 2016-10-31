@@ -6,4 +6,9 @@ namespace Masma.Lab3
     {
         FormAgent Form { get; set; }
     }
+
+    public interface IContainNumberProviders
+    {
+        int NumberOfProviders { get; set; }
+    }
 }

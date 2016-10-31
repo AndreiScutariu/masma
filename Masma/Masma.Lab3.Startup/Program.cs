@@ -1,4 +1,5 @@
-﻿using jade.core;
+﻿using System.Threading;
+using jade.core;
 using Masma.Builder;
 using Masma.Lab3.Behaviours;
 using AgentContainer = jade.wrapper.AgentContainer;
@@ -20,22 +21,25 @@ namespace Masma.Lab3.Startup
                 .Build();
             provider.start();
 
-            //var provider2 = agentBuilder.Create<AgentWithForm>("Provider_2")
-            //    .WithBehaivour<WinFormRefreshBehaviour<AgentWithForm>>()
-            //    .WithBehaivour<ProviderHandleRequestsBehaviour>()
-            //    .Build();
-            //provider2.start();
+            var provider2 = agentBuilder.Create<AgentWithForm>("Provider_2")
+                .WithBehaivour<WinFormRefreshBehaviour<AgentWithForm>>()
+                .WithBehaivour<ProviderHandleRequestsBehaviour>()
+                .Build();
+            provider2.start();
 
-            //var provider3 = agentBuilder.Create<AgentWithForm>("Provider_3")
-            //    .WithBehaivour<WinFormRefreshBehaviour<AgentWithForm>>()
-            //    .WithBehaivour<ProviderHandleRequestsBehaviour>()
-            //    .Build();
-            //provider3.start();
-            
+            var provider3 = agentBuilder.Create<AgentWithForm>("Provider_3")
+                .WithBehaivour<WinFormRefreshBehaviour<AgentWithForm>>()
+                .WithBehaivour<ProviderHandleRequestsBehaviour>()
+                .Build();
+            provider3.start();
+
+            Thread.Sleep(1000);
+
             var consumer = agentBuilder
                 .Create<AgentWithForm>("Consumer")
                 .WithBehaivour<WinFormRefreshBehaviour<AgentWithForm>>()
-                .WithBehaivour<ConsumerSendRequestsBehaviour<AgentWithForm>>()
+                //.WithBehaivour<ConsumerSendSumRequestsBehaviour<AgentWithForm>>()
+                .WithBehaivour<ConsumerSendCostOfProductRequestsBehaviour<AgentWithForm>>()
                 .WithBehaivour<ConsumerHandleResponsesBehaviour>()
                 .Build();
             consumer.start();

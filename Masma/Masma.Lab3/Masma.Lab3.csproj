@@ -47,7 +47,8 @@
   <ItemGroup>
     <Compile Include="AgentWithForm.cs" />
     <Compile Include="Behaviours\ConsumerHandleResponsesBehaviour.cs" />
-    <Compile Include="Behaviours\ConsumerSendRequestsBehaviour.cs" />
+    <Compile Include="Behaviours\ConsumerSendCostOfProductRequestsBehaviour.cs" />
+    <Compile Include="Behaviours\ConsumerSendSumRequestsBehaviour.cs" />
     <Compile Include="Behaviours\ProviderHandleRequestsBehaviour.cs" />
     <Compile Include="Messages\AddThisNumbersRequest.cs" />
     <Compile Include="Behaviours\Base\ReceiveAndHandleMessageBehaviour.cs" />
@@ -60,6 +61,8 @@
     </Compile>
     <Compile Include="IHaveAnWindowsForm.cs" />
     <Compile Include="Messages\AddThisNumbersResponse.cs" />
+    <Compile Include="Messages\CostOfProductRequest.cs" />
+    <Compile Include="Messages\CostOfProductResponse.cs" />
     <Compile Include="ProductRepository\Product.cs" />
     <Compile Include="ProductRepository\ProductRepostory.cs" />
     <Compile Include="Services\PerformanceCounter.cs" />
