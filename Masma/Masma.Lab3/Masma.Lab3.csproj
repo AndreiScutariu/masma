@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{256EAE56-0880-4350-B119-B6F46F28A706}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Masma.Lab3</RootNamespace>
+    <AssemblyName>Masma.Lab3</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="JadeLeap">
+      <HintPath>..\Lib\JadeLeap.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net20\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="vjslib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgentWithForm.cs" />
+    <Compile Include="Behaviours\ConsumerHandleResponsesBehaviour.cs" />
+    <Compile Include="Behaviours\ConsumerSendRequestsBehaviour.cs" />
+    <Compile Include="Behaviours\ProviderHandleRequestsBehaviour.cs" />
+    <Compile Include="Messages\AddThisNumbersRequest.cs" />
+    <Compile Include="Behaviours\Base\ReceiveAndHandleMessageBehaviour.cs" />
+    <Compile Include="Behaviours\WinFormRefreshBehaviour.cs" />
+    <Compile Include="Form\FormAgent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormAgent.Designer.cs">
+      <DependentUpon>FormAgent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IHaveAnWindowsForm.cs" />
+    <Compile Include="Messages\AddThisNumbersResponse.cs" />
+    <Compile Include="ProductRepository\Product.cs" />
+    <Compile Include="ProductRepository\ProductRepostory.cs" />
+    <Compile Include="Services\PerformanceCounter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ServiceLocator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Agent.Factory\Masma.Builder.csproj">
+      <Project>{f0147e9b-58c2-4012-9036-98dafeb68053}</Project>
+      <Name>Masma.Builder</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Masma.Agent.Base\Masma.Common.csproj">
+      <Project>{6df50e8d-f52a-4615-ae6c-312df86574b1}</Project>
+      <Name>Masma.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Masma.Messages\Masma.Messages.csproj">
+      <Project>{4dbc9b39-0a27-4b48-8c24-bb01e6ec07c8}</Project>
+      <Name>Masma.Messages</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form\FormAgent.resx">
+      <DependentUpon>FormAgent.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
