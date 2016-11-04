@@ -30,6 +30,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Masma.Lab3.Demo", "Masma.La
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Masma.Lab3", "Masma.Lab3\Masma.Lab3.csproj", "{256EAE56-0880-4350-B119-B6F46F28A706}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Masma.Lab4.Demo", "Masma.Lab4.Demo\Masma.Lab4.Demo.csproj", "{194B3CD4-7552-4EC5-9CBB-9A53A15A1C1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Masma.Lab4.Startup", "Masma.Lab4.Startup\Masma.Lab4.Startup.csproj", "{0BBFE942-A10D-4244-BC77-A32DF3897D8C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,6 +76,14 @@ Global
 		{256EAE56-0880-4350-B119-B6F46F28A706}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{256EAE56-0880-4350-B119-B6F46F28A706}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{256EAE56-0880-4350-B119-B6F46F28A706}.Release|Any CPU.Build.0 = Release|Any CPU
+		{194B3CD4-7552-4EC5-9CBB-9A53A15A1C1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{194B3CD4-7552-4EC5-9CBB-9A53A15A1C1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{194B3CD4-7552-4EC5-9CBB-9A53A15A1C1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{194B3CD4-7552-4EC5-9CBB-9A53A15A1C1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BBFE942-A10D-4244-BC77-A32DF3897D8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BBFE942-A10D-4244-BC77-A32DF3897D8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BBFE942-A10D-4244-BC77-A32DF3897D8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BBFE942-A10D-4244-BC77-A32DF3897D8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

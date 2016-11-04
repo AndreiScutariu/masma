@@ -15,8 +15,8 @@ namespace Masma.Lab1.Startup
 
             var agentBuilder = new AgentBuilder(mc);
 
-            var agent1 = agentBuilder.Create<BaseAgent>("BaseAgent_1").WithBehaivour<CounterBehaviour>().Build();
-            agent1.start();
+            //var agent1 = agentBuilder.Create<BaseAgent>("BaseAgent_1").WithBehaivour<CounterBehaviour>().Build();
+            //agent1.start();
 
             //var agent2 = agentBuilder.Create<BaseAgent>("BaseAgent_2").WithBehaivour<CounterBehaviour>().Build();
             //agent2.start();
@@ -27,11 +27,11 @@ namespace Masma.Lab1.Startup
             //var agent4 = agentBuilder.Create<BaseAgent>("BaseAgent_4").WithBehaivour<CounterBehaviour>().Build();
             //agent4.start();
 
-            //var sumAgent = agentBuilder.Create<BaseAgent>("Sum Agent").WithBehaivour<ComputeSumBehaviour>().Build();
-            //sumAgent.start();
+            var sumAgent = agentBuilder.Create<BaseAgent>("Sum Agent").WithBehaivour<ComputeSumBehaviour>().Build();
+            sumAgent.start();
 
-            //var avgAgent = agentBuilder.Create<BaseAgent>("Avg Agent").WithBehaivour<ComputeAverageBehaviour>().Build();
-            //avgAgent.start();
+            var avgAgent = agentBuilder.Create<BaseAgent>("Avg Agent").WithBehaivour<ComputeAverageBehaviour>().Build();
+            avgAgent.start();
         }
 
         private static AgentContainer CreateAgentContainer()
